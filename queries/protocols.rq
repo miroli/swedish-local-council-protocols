@@ -1,0 +1,9 @@
+# All meeting protocols from Swedish region councils
+SELECT ?protocol ?protocolLabel ?region ?pubDate WHERE {
+  ?protocol wdt:P31 wd:Q2085515 ;
+        wdt:P123 ?region ;
+        wdt:P577 ?pubDate .
+  ?region wdt:P31 wd:Q1754161 .
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+ORDER BY ?region ?pubDate
